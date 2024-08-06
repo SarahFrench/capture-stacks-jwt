@@ -10,7 +10,7 @@ variable "jwt" {
 }
 
 provider "tfcoremock" "default" {
-    config = {
+    config {
         use_only_state = true
     }
 }
