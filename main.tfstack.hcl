@@ -1,6 +1,6 @@
 required_providers {
   tfcoremock = {
-    source = "hashicorp/tfcoremock"
+    source  = "hashicorp/tfcoremock"
     version = "0.2.0"
   }
 }
@@ -10,19 +10,19 @@ variable "jwt" {
 }
 
 provider "tfcoremock" "default" {
-    config {
-        use_only_state = true
-    }
+  config {
+    use_only_state = true
+  }
 }
 
 component "jwt" {
-    source = "./main"
+  source = "./main"
 
-    inputs = {
-        jwt = var.jwt
-    }
+  inputs = {
+    jwt = var.jwt
+  }
 
-    providers = {
-        tfcoremock = provider.tfcoremock.default
-    }
+  providers = {
+    tfcoremock = provider.tfcoremock.default
+  }
 }
