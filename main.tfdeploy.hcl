@@ -1,5 +1,5 @@
 identity_token "hcp" {
-  audience = ["hcp.workload.identity"]
+  audience = ["api://AzureADTokenExchange"]
 }
 
 deployment "development" {
